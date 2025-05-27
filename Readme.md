@@ -3,6 +3,7 @@
 * Студент: [Александр Колесников](https://up.htmlacademy.ru/adaptive-individual/2/user/2602839).
 * Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789e).
 * Ссылка на макет: [Макет Figma](https://www.figma.com/file/Eya2LeQiior4sYI98PnMHp).
+* Обзор макета: [Youtube](https://youtu.be/1Jr2JZSRj84).
 
 
 <img width="769" alt="заставка макета Кэт Энерджи" src="https://up.htmlacademy.ru/assets/intensives/adaptive-individual/2/projects/cat-energy/image.jpg?v=202502110551">
