@@ -1,1 +1,27 @@
 /* здесь используйте глобальные переменные */
+
+/* Добавили общую переменную для использования шрифта */
+$primary-font: "Oswald", "arial", sans-serif;
+$second-font: "Lato", "arial", sans-serif;
+
+/* Добавили переменные для VIEW-PROT-SIZE */
+
+$view-port-tablet: 768px;
+$view-port-desktop: 1440px;
+
+
+/* Добавили общую переменную для использования ЦВЕТОВ - COLORS */
+
+// TEXT-COLORS
+$primary-text-color: #000000;
+$second-text-color: #ffffff;
+
+// BG-COLORS
+
+$primary-bg-color: #ffffff;
+$second-bg-color: #f2f2f2;
+$button-bg-color: #68b738;
+$button-bg-color2: #5eaa2f;
+$picture-bg-color: rgba(104, 183, 56, 0.85);
+
+// BUTTON-COLORS

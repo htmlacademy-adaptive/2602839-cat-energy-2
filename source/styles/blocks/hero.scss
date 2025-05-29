@@ -1,1 +1,19 @@
-//
+//  HERO
+.hero {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $primary-text-color;
+}
+
+.hero__title {
+  font-size: 36px;
+}
+
+.hero__description {
+  font-size: 14px;
+}
+
