@@ -1,1 +1,15 @@
-//
+//  КАК ЭТО РАБОТАЕТ
+
+.how-it-work__list {
+  @include list-base;
+}
+
+.how-it-work__item {
+  @include font-info($second-font, 14px, 18px);
+  color: $font-color-accent;
+
+  @include tablet() {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

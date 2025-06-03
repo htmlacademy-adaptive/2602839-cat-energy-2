@@ -1,1 +1,15 @@
-//
+//  КОНТАКТЫ
+
+.contacts__title {
+  @include font-info($primary-font, 16px, 20px);
+  color: $font-color-primary-alternate;
+}
+
+.contacts__address {
+  @include font-info($second-font, 14px, 20px);
+  color: $font-color-accent;
+}
+
+.contacts__wrapper--alternate {
+  background-color: $bg-color-second;
+}

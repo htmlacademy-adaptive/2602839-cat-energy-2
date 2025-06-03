@@ -1,1 +1,6 @@
-//
+//  ПОДВАЛ
+
+.footer__developer-title {
+  @include font-info($second-font, 16px, 20px);
+  color: $font-color-accent;
+}

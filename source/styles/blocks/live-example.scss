@@ -1,1 +1,23 @@
-//
+//  ЖИВОЙ ПРИМЕР
+
+.live-example__wrapper {
+  background-color: $bg-color-second;
+}
+
+.live-example__description {
+  @include font-info($second-font, 14px, 18px);
+  color: $font-color-accent;
+}
+
+.live-example__value-description {
+  @include font-info($primary-font, 12px, 12px);
+}
+
+.live-example__value-result {
+  @include font-info($primary-font, 24px, 24px);
+}
+
+
+.live-example__cost {
+  @include font-info($primary-font, 14px, 20px);
+}

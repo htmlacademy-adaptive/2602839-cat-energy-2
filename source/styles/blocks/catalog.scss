@@ -1,1 +1,9 @@
 //
+
+.catalog__title {
+  @include font-info($primary-font, 36px, 36px);
+}
+
+.catalog__list {
+  @include list-base;
+}

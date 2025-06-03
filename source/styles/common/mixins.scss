@@ -1,5 +1,6 @@
 //  МИКСИНЫ - MIXINS
 
+
 //  Шрифты - FONTS
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
@@ -9,4 +10,70 @@
     src: $font-src;
     font-display: swap;
   }
+}
+
+//  Медиазапросы от ширины экрана
+
+@mixin desktop {
+  @media (min-width: $view-port-desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $view-port-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: calc($view-port-tablet - 1px)) {
+    @content;
+  }
+}
+
+// ИНФО по шрифтам
+
+@mixin font-info($font-family, $font-size, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-style: normal;
+  font-weight: 400;
+}
+
+//  Обнуление для списков
+
+@mixin list-base {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//  КНОПКИ большие и маленькие ))
+
+@mixin button-base {
+  text-transform: uppercase;
+  font-family: inherit;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin button-large {
+  @include font-info($primary-font, 20px, 26px);
+  @include button-base;
+  padding: 10px;
+
+  @include tablet() {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px;
+  }
+}
+
+@mixin button-small {
+  @include font-info($primary-font, 16px, 20px);
+  @include button-base;
+  padding: 10px;
 }

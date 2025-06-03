@@ -1,1 +1,29 @@
-//
+// ПРЕМУЩЕСТВА - ADVANTAGES
+
+.advantages__list {
+  @include list-base;
+}
+
+.advantages__item {
+  background-color: $bg-color-second;
+}
+
+.advantages__title {
+  @include font-info($primary-font, 24px, 37px);
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.advantages__item-description {
+  @include font-info($second-font, 14px, 18px);
+  color: $font-color-accent;
+
+  @include tablet() {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
