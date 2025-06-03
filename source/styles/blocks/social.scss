@@ -4,4 +4,22 @@
   @include list-base;
 
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social__link {
+  display: block;
+  min-width: 28px;
+  min-height: 22px;
+  color: $icon-color-primary;
+
+  &:hover {
+    color: $button-bg-color-first;
+  }
+
+  &:active {
+    color: rgba($button-bg-color-first, 0.3);
+  }
 }

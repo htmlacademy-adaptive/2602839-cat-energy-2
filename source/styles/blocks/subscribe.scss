@@ -8,16 +8,8 @@
   @include font-info($primary-font, 16px, 24px);
 }
 
-.subscribe__form {
-
-}
-
 .subscribe-input {
   @include font-info($primary-font, 20px, 24px);
   text-transform: uppercase;
   color: $font-color-accent;
-}
-
-.subscribe-button {
-
 }

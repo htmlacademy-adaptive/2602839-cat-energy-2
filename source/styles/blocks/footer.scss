@@ -1,5 +1,33 @@
 //  ПОДВАЛ
 
+.footer__wrapper {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex-direction: column;
+}
+
+.footer__logo {
+  align-self: center;
+  padding-bottom: 17px;
+}
+
+.footer__social {
+  padding-top: 20px;
+  padding-bottom: 17px;
+  border-top: 1px solid $border-color-second;
+  border-bottom: 1px solid $border-color-second;
+}
+
+.footer__developer {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .footer__developer-title {
   @include font-info($second-font, 16px, 20px);
   color: $font-color-accent;
