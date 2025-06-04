@@ -9,10 +9,69 @@
   color: $font-color-primary;
 }
 
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 27px 0 20px;
+}
+
 .hero__title {
-  font-size: 36px;
+  @include font-info($primary-font, 36px, 36px);
+  margin: 0 0 25px;
+  color: $font-color-second;
+  text-align: center;
 }
 
 .hero__description {
-  font-size: 14px;
+  @include font-info($primary-font, 14px, 14px);
+  text-transform: uppercase;
+  color: $font-color-second;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.hero__image {
+  display: block;
+  min-width: 280px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero__button {
+  @include font-info($primary-font, 16px, 20px);
+  order: 3;
+}
+
+.hero__decoration {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $bg-color-accent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: $bg-color-picture;
+  }
+
+  @include mobile {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 302px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../../images/hero-decoration-mobile@1x.jpg");
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/hero-decoration-mobile@2x.jpg");
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
 }

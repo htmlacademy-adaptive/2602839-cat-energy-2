@@ -5,6 +5,8 @@
   @include list-base;
   font-family: inherit;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
 
   @include tablet {
     font-size: 18px;
@@ -17,6 +19,31 @@
   }
 }
 
+.site-list__item {
+  @include mobile {
+    &:first-child .site-list__link {
+      border-top: 1px solid $border-color-alternate;
+    }
+  }
+}
+
 .site-list__link {
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+
+  display: block;
+  background-color: $bg-color-primary;
+  color: $font-color-primary;
+  padding: 22px 20px 23px;
+  border-bottom: 1px solid $border-color-alternate;
+
+  &:hover {
+    color: rgba($font-color-primary, 0.6);
+  }
+
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
 }
