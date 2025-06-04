@@ -7,19 +7,21 @@
   text-transform: uppercase;
   text-align: center;
   color: $font-color-primary;
+  margin-bottom: 20px;
 }
 
 .hero__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 27px 0 20px;
+  padding: 0 15px;
 }
 
 .hero__title {
   @include font-info($primary-font, 36px, 36px);
-  margin: 0 0 25px;
+  margin: 27px 0 25px;
   color: $font-color-second;
   text-align: center;
+  text-transform: none;
 }
 
 .hero__description {

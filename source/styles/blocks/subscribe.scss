@@ -6,10 +6,17 @@
 
 .subscribe__text {
   @include font-info($primary-font, 16px, 24px);
+  text-align: center;
 }
 
 .subscribe-input {
   @include font-info($primary-font, 20px, 24px);
   text-transform: uppercase;
   color: $font-color-accent;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.subscribe-button {
+  width: 100%;
 }

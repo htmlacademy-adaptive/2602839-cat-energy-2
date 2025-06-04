@@ -32,6 +32,18 @@
   }
 }
 
+.main-nav__toggle--closed::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 2px;
+  background-color: $font-color-primary;
+  box-shadow:
+    0 8px 0 0 $font-color-primary,
+    0 -8px 0 0 $font-color-primary;
+}
+
 .main-nav__toggle--opened::before,
 .main-nav__toggle--opened::after {
   content: "";
@@ -54,6 +66,7 @@
   right: 0;
   position: absolute;
   z-index: 1;
+  // display: none;
 }
 
 .main-nav__list {
