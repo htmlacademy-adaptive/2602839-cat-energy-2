@@ -1,15 +1,45 @@
 //  КАК ЭТО РАБОТАЕТ
 
+.how-it-work {
+  padding-bottom: 49px;
+}
+
+.how-it-work__title {
+  margin: 20px auto 40px;
+}
+
 .how-it-work__list {
   @include list-base;
+  display: grid;
+  gap: 20px;
 }
 
 .how-it-work__item {
   @include font-info($second-font, 14px, 18px);
   color: $font-color-accent;
+  display: grid;
+  grid-template-columns: 60px auto;
+  gap: 20px;
+  position: relative;
 
   @include tablet() {
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.how-it-work__item::before {
+  content: "";
+  display: block;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $bg-color-accent;
+  aspect-ratio: 1;
+  width: 60px;
+}
+
+.how-it-work__description {
+  margin: 0;
+  align-self: center;
 }
