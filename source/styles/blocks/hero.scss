@@ -1,1 +1,57 @@
-//
+//  HERO
+.hero {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $font-color-primary;
+  margin-bottom: 20px;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+
+  background-image:
+    linear-gradient($bg-color-picture 61%, $bg-color-primary 39%),
+    image-set("../../images/hero-decoration-mobile@1x.jpg" 1x type("image/jpg"), "../../images/hero-decoration-mobile@2x.jpg" 2x type("image/jpg")),
+    linear-gradient(to right, $bg-color-picture-alternate);
+
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto, 320px, auto;
+  position: relative;
+}
+
+.hero__title {
+  @include font-info($primary-font, 36px, 36px);
+  margin: 27px 0 25px;
+  color: $font-color-second;
+  text-align: center;
+  text-transform: none;
+}
+
+.hero__description {
+  @include font-info($primary-font, 14px, 14px);
+  text-transform: uppercase;
+  color: $font-color-second;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.hero__image {
+  display: block;
+  min-width: 280px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero__button {
+  @include font-info($primary-font, 16px, 20px);
+  order: 3;
+}

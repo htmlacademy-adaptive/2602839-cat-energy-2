@@ -1,5 +1,27 @@
-// .header {
-//   background-color: #663399;
-//   color: #ffffff;
-//   padding: 10px 15px;
-// }
+// ХЕДЕР - HEADER
+
+.header {
+  background-color: $bg-color-primary;
+  min-height: 65px;
+}
+
+.header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  margin-right: 40px;
+  width: fit-content;
+
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

@@ -1,1 +1,58 @@
 /* здесь используйте глобальные переменные */
+
+/* Добавили общую переменную для использования шрифта */
+$primary-font: "Oswald", "arial", sans-serif;
+$second-font: "Lato", "arial", sans-serif;
+
+/* Добавили переменные для VIEW-PROT-SIZE */
+
+$view-port-tablet: 768px;
+$view-port-desktop: 1440px;
+
+
+/* Добавили общую переменную для использования ЦВЕТОВ - COLORS
+
+В процессе наполнения. ))
+
+*/
+
+// FONTS-COLORS
+$font-color-primary: #000000;
+$font-color-primary-alternate: #111111;
+$font-color-primary-alternate-accent: #222222;
+$font-color-second: #ffffff;
+$font-color-accent: #444444;
+
+// BG-COLORS
+
+$bg-color-primary: #ffffff;
+$bg-color-second: #f2f2f2;
+$bg-color-picture: rgba(104, 183, 56, 0.85);
+$bg-color-accent: #68b738;
+$bg-color-accent-alternate: #eaeaea;
+$bg-color-transparent: rgba(#ffffff, 0);
+$bg-color-picture-alternate: #444444;
+
+// BUTTON-COLORS
+
+$button-bg-color-first: #68b738;
+$button-bg-color-second: #5eaa2f;
+
+//  ICON-COLORS
+
+$icon-color-primary: #666666;
+$icon-color-second: #68b738;
+
+//  INPUT-COLORS
+
+$input-color-border: #e7e7e7;
+$input-color-border-accent: #c4c4c4;
+$input-color-border-hover: #cdcdcd;
+$input-color-border-focus: #444444;
+$input-color-error: #ff8282;
+
+//  BORDER-COLORS
+
+$border-color-primary: #ebebeb;
+$border-color-second: #d9d9d9;
+$border-color-alternate: #e6e6e6;

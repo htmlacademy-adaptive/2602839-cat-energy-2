@@ -1,1 +1,75 @@
-//
+//  ЖИВОЙ ПРИМЕР
+
+.live-example {
+  background-color: $bg-color-second;
+  padding-top: 25px;
+}
+
+.live-example__wrapper {
+  display: grid;
+  padding-bottom: 40px;
+}
+
+.live-example__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.live-example__description {
+  @include font-info($second-font, 14px, 18px);
+  color: $font-color-accent;
+  margin: 0 0 20px;
+}
+
+.live-example__statistics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 0 0 9px;
+}
+
+.live-example__value {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.live-example__value-description {
+  @include font-info($second-font, 12px, 12px);
+  position: relative;
+  top: -10px;
+  text-transform: lowercase;
+  text-align: center;
+  align-self: center;
+  max-width: 79px;
+  background-color: $bg-color-second;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.live-example__value-result {
+  @include font-info($primary-font, 24px, 24px);
+  margin: 0;
+  border: 1px solid $input-color-border-accent;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 14px 20px 17px;
+}
+
+
+.live-example__cost {
+  @include font-info($primary-font, 14px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.live-example__slider {
+  margin: 0 auto;
+  width: 280px;
+  // height: 256px;
+}

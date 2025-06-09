@@ -1,0 +1,45 @@
+//
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page__body {
+  @include font-info($primary-font, 16px, 18px);
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $bg-color-primary;
+  color: $font-color-primary;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// .wrapper {
+//   display: none;
+// }
+
+.page__container {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+}

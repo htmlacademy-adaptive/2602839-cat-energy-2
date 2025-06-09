@@ -1,1 +1,25 @@
 //
+
+.additional__title {
+  @include font-info($primary-font, 24px, 37px);
+  text-transform: uppercase;
+}
+
+.additional__list {
+  @include list-base;
+}
+
+.additional__item-title {
+  @include font-info($primary-font, 16px, 16px);
+  text-transform: uppercase;
+  color: $font-color-primary-alternate-accent;
+}
+
+.additional__characteristics {
+  @include font-info($second-font, 14px, 20px);
+  color: $font-color-accent;
+}
+
+.additional__gift-description {
+  @include font-info($second-font, 16px, 20px);
+}

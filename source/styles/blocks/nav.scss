@@ -1,1 +1,75 @@
 //
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__toggle {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  background-color: $bg-color-transparent;
+  color: $font-color-primary;
+  border: none;
+  right: 0;
+  top: 0;
+  margin-top: 10px;
+  margin-right: 13px;
+  width: 40px;
+  height: 40px;
+  padding: 8px 7px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.main-nav__toggle--closed::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 2px;
+  background-color: $font-color-primary;
+  box-shadow:
+    0 8px 0 0 $font-color-primary,
+    0 -8px 0 0 $font-color-primary;
+}
+
+.main-nav__toggle--opened::before,
+.main-nav__toggle--opened::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: $font-color-primary;
+}
+
+.main-nav__toggle--opened::after {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.main-nav__toggle--opened::before {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.main-nav__wrapper {
+  width: 100%;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-flow: column wrap;
+}
