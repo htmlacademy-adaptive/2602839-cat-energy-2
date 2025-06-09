@@ -8,14 +8,66 @@
 
 .advantages__item {
   background-color: $bg-color-second;
+  display: flex;
+  flex-direction: column;
   padding: 23px 20px 22px;
+  gap: 19px;
+  position: relative;
 }
 
 .advantages__title {
   @include font-info($primary-font, 24px, 37px);
   text-transform: uppercase;
   margin: 0;
-  align-self: center;
+  left: 70px;
+  text-align: center;
+  position: relative;
+
+  &--fit {
+    background-color: $bg-color-accent;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    position: relative;
+    width: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 100%;
+      transform: translate(-50%, -56%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../../icons/stack.svg#lean-cat-icon");
+    }
+  }
+
+  &--fat {
+    background-color: $bg-color-accent;
+    border-radius: 50%;
+    // aspect-ratio: 1;
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 134%;
+      transform: translate(-49%, -50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../../icons/stack.svg#strong-cat-icon");
+    }
+  }
+
 
   @include tablet {
     font-size: 36px;
@@ -23,7 +75,7 @@
   }
 }
 
-.advantages__item-description {
+.advantages__description {
   @include font-info($second-font, 14px, 18px);
   color: $font-color-accent;
   position: relative;
@@ -47,8 +99,24 @@
   }
 }
 
-.advantages__item-button {
-  position: relative;
+.advantages__button {
   grid-column: 1/-1;
   width: fit-content;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 32px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    mask-image: url("../../icons/stack.svg#arrow-icon");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $font-color-primary;
+    transition: 0.2s ease-in-out;
+    margin-left: 15px;
+  }
 }

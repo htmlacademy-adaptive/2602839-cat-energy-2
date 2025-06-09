@@ -25,9 +25,36 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  // &:hover {
+  //   opacity: 0.6;
+  // }
+
+  &:hover::after,
+  &:active::after {
+    background-color: $button-bg-color-first;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    color: $font-color-accent;
+    mask-image: url("../../icons/stack.svg#developer-icon");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $font-color-accent;
+  }
 }
+
 
 .footer__developer-title {
   @include font-info($second-font, 16px, 20px);
   color: $font-color-accent;
 }
+

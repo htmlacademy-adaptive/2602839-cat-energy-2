@@ -28,10 +28,29 @@
   }
 }
 
+.how-it-work__item--leaf::before {
+  background-image: url("../../icons/stack.svg#leaf-icon");
+  background-size: 30px 32px;
+}
+
+.how-it-work__item--powder::before {
+  background-image: url("../../icons/stack.svg#powder-icon");
+  background-size: 27px 29px;
+}
+
+.how-it-work__item--tableware::before {
+  background-image: url("../../icons/stack.svg#tableware-icon");
+  background-size: 26px 30px;
+}
+
+.how-it-work__item--time::before {
+  background-image: url("../../icons/stack.svg#time-icon");
+  background-size: 27px 31px;
+}
+
 .how-it-work__item::before {
   content: "";
   display: block;
-  background-size: initial;
   background-repeat: no-repeat;
   background-position: center;
   background-color: $bg-color-accent;
