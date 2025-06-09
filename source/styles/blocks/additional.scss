@@ -19,3 +19,7 @@
   @include font-info($second-font, 14px, 20px);
   color: $font-color-accent;
 }
+
+.additional__gift-description {
+  @include font-info($second-font, 16px, 20px);
+}

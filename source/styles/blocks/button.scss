@@ -43,6 +43,7 @@
   text-align: center;
   background: $bg-color-second;
   color: $font-color-accent;
+  width: 100%;
 
   &:hover {
     background: rgba($font-color-accent, 0.3);  // ПЕРЕПРОВЕРИТЬ КОЭФ

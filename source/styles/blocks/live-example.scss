@@ -38,7 +38,7 @@
 }
 
 .live-example__value-description {
-  @include font-info($primary-font, 12px, 12px);
+  @include font-info($second-font, 12px, 12px);
   position: relative;
   top: -10px;
   text-transform: lowercase;
