@@ -37,10 +37,6 @@
   @include font-info($second-font, 12px, 16px);
 }
 
-.card__title--show-more {
-  color: $font-color-primary-alternate;
-}
-
 .card__link {
   text-decoration: none;
 }

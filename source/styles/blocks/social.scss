@@ -15,61 +15,47 @@
   min-height: 22px;
   color: $icon-color-primary;
 
+  &::before {
+    content: "";
+    width: 28px;
+    display: block;
+    height: 22px;
+  }
+
   &:hover {
-    color: $button-bg-color-first;
+    &::before {
+      background-color: $bg-color-accent;
+    }
   }
 
   &:active {
-    color: rgba($button-bg-color-first, 0.3);
+    &::before {
+      background-color: rgba($bg-color-accent, 0.6);
+    }
   }
 
-  &--vkontakte {
+
+  &--vkontakte::before {
     mask-image: url("../../icons/stack.svg#vkontakte-icon");
     mask-position: center;
     mask-repeat: no-repeat;
     background-color: $font-color-accent-alternate;
-
-    &:hover {
-      background-color: $bg-color-accent;
-    }
-
-    &:active {
-      background-color: $bg-color-accent;
-      opacity: 0.6;
-    }
+    content: "";
   }
 
-  &--youtube {
+  &--youtube::before {
     mask-image: url("../../icons/stack.svg#youtube-icon");
     mask-position: center;
     mask-repeat: no-repeat;
     background-color: $font-color-accent-alternate;
-
-
-    &:hover {
-      background-color: $bg-color-accent;
-    }
-
-    &:active {
-      background-color: $bg-color-accent;
-      opacity: 0.6;
-    }
+    content: "";
   }
 
-  &--telegram {
+  &--telegram::before {
     mask-image: url("../../icons/stack.svg#telegram-icon");
     mask-position: center;
     mask-repeat: no-repeat;
     background-color: $font-color-accent-alternate;
-
-
-    &:hover {
-      background-color: $bg-color-accent;
-    }
-
-    &:active {
-      background-color: $bg-color-accent;
-      opacity: 0.6;
-    }
+    content: "";
   }
 }

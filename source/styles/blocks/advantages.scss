@@ -13,61 +13,56 @@
   padding: 23px 20px 22px;
   gap: 19px;
   position: relative;
+
+  &--fit::before {
+    content: "";
+    background-color: $bg-color-accent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+
+  &--fit::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 27px;
+    width: 36px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../icons/stack.svg#lean-cat-icon");
+  }
+
+  &--strong::before {
+    content: "";
+    background-color: $bg-color-accent;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+
+  &--strong::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 10px;
+    height: 28px;
+    width: 67px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../icons/stack.svg#strong-cat-icon");
+  }
 }
 
 .advantages__title {
   @include font-info($primary-font, 24px, 37px);
   text-transform: uppercase;
   margin: 0;
-  left: 70px;
-  text-align: center;
-  position: relative;
 
-  &--fit {
-    background-color: $bg-color-accent;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    position: relative;
-    width: 50px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: 100%;
-      width: 100%;
-      transform: translate(-50%, -56%);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      background-image: url("../../icons/stack.svg#lean-cat-icon");
-    }
-  }
-
-  &--fat {
-    background-color: $bg-color-accent;
-    border-radius: 50%;
-    // aspect-ratio: 1;
-    position: relative;
-    width: 50px;
-    height: 50px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: 100%;
-      width: 134%;
-      transform: translate(-49%, -50%);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      background-image: url("../../icons/stack.svg#strong-cat-icon");
-    }
-  }
-
+  padding-left: 70px;
 
   @include tablet {
     font-size: 36px;
@@ -81,17 +76,6 @@
   position: relative;
   grid-column: 1/-1;
   margin: 4px 0 23px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    bottom: -23px;
-    background-color: $border-color-second;
-  }
 
   @include tablet() {
     font-size: 16px;

@@ -20,6 +20,39 @@
   color: $font-color-accent;
 }
 
+.additional__gift {
+  margin-top: 20px;
+  min-height: 290px;
+  background-image:
+    linear-gradient($bg-color-picture),
+    image-set("../../images/catalog-bg-gift-mobile@1x.png" 1x type("image/png"), "../../images/catalog-bg-gift-mobile@2x.png" 2x type("image/png")),
+    linear-gradient(to right, $bg-color-picture-alternate);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto, 280px, auto;
+  position: relative;
+}
+
+
 .additional__gift-description {
   @include font-info($second-font, 16px, 20px);
+  position: relative;
+  padding: 187px 59px 0;
+  margin: 0 auto;
+  text-align: center;
+  color: $font-color-second;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 78px;
+    height: 81px;
+    background-image: url("../../icons/stack.svg#gift-icon");
+    background-repeat: no-repeat;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+  }
 }
