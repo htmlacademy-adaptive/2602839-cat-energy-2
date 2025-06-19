@@ -11,47 +11,109 @@
 }
 
 .hero__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0 15px;
-
-  background-image:
-    linear-gradient($bg-color-picture 61%, $bg-color-primary 39%),
-    image-set("../../images/hero-decoration-mobile@1x.jpg" 1x type("image/jpg"), "../../images/hero-decoration-mobile@2x.jpg" 2x type("image/jpg")),
-    linear-gradient(to right, $bg-color-picture-alternate);
-
-
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: auto, 320px, auto;
   position: relative;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+
+    background-image:
+      linear-gradient($bg-color-picture 61%, $bg-color-primary 39%),
+      image-set("../../images/hero-decoration-mobile@1x.jpg" 1x type("image/jpg"), "../../images/hero-decoration-mobile@2x.jpg" 2x type("image/jpg")),
+      linear-gradient(to right, $bg-color-picture-alternate);
+
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto, 320px, auto;
+  }
 }
 
 .hero__title {
   @include font-info($primary-font, 36px, 36px);
-  margin: 27px 0 25px;
-  color: $font-color-second;
-  text-align: center;
-  text-transform: none;
+  margin: 0;
+
+  @include mobile {
+    color: $font-color-second;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+
+  @include tablet {
+    @include font-info($primary-font, 60px, 60px);
+    color: $font-color-primary;
+    line-height: 60px;
+    max-width: 420px;
+    margin-top: 65px;
+    margin-left: 90px;
+    margin-bottom: 40px;
+    text-transform: none;
+    text-align: left;
+  }
 }
 
 .hero__description {
   @include font-info($primary-font, 14px, 14px);
   text-transform: uppercase;
-  color: $font-color-second;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 29px;
+
+  @include mobile {
+    color: $font-color-second;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 29px;
+  }
+
+  @include tablet {
+    @include font-info($primary-font, 20px, 20px);
+    margin-top: 40px;
+    margin-bottom: 49px;
+    margin-left: 90px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  @include desktop {
+    margin-bottom: 52px;
+  }
 }
 
 .hero__image {
   display: block;
-  min-width: 280px;
-  height: auto;
-  margin: 0 auto;
+
+  @include mobile {
+    min-width: 280px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    margin-top: 83px;
+    // margin-left: 90px;
+  }
+
+  @include desktop {
+    position: absolute;
+    margin: 0;
+    top: 143px;
+    left: 50%;
+    transform: translateX(-30%) translateY(2px);
+  }
 }
 
 .hero__button {
   @include font-info($primary-font, 16px, 20px);
-  order: 3;
+
+  @include mobile {
+    order: 3;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 1;
+    position: absolute;
+    left: 120px;
+  }
 }
