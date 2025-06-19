@@ -19,7 +19,7 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="page__container">
+    <div class="header__container page__container">
       <!-- ЛОГОТИПЫ -->
       <a class="header__logo logo" href="index.html">
         <picture>
@@ -31,13 +31,13 @@
       </a>
 
       <!-- НАВИГАЦИЯ - МЕНЮ -->
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--no-js">
         <button class="main-nav__toggle main-nav__toggle--opened" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item site-list__item--active site-list__item--active-alternate">
               <a class="site-list__link" href="index.html">
                 Главная
               </a>
@@ -154,8 +154,8 @@
             <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Стройный кот">
           </picture>
           <div class="slider__range">
-            <button class="slider__button" type="button">
-              <span class="visually-hidden">Управление отображения кота до и после</span>
+            <!-- <button class="slider__button" type="button"> -->
+            <span class="visually-hidden">Управление отображения кота до и после</span>
             </button>
           </div>
 
@@ -165,15 +165,15 @@
 
     <!-- КОНТАКТЫ -->
     <section class="contacts">
-      <div class="page__container">
-        <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Контакты.</h2>
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">
-            <p class="contacts__description">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
-          </address>
-        </div>
+      <div class="contacts__wrapper page__container">
+
+        <h2 class="visually-hidden">Контакты.</h2>
+        <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">
+          <p class="contacts__description">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+        </address>
       </div>
+
       <!-- КАРТА для КОНТАКТЫ -->
       <div class="contacts__map">
         <picture>

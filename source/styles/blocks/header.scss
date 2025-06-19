@@ -2,7 +2,38 @@
 
 .header {
   background-color: $bg-color-primary;
-  min-height: 65px;
+
+  @include mobile {
+    min-height: 65px;
+  }
+
+  @include tablet {
+    background-color: $bg-color-transparent;
+  }
+}
+
+.header__container {
+  position: relative;
+
+  @include mobile {
+    z-index: 3;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 25px;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding-top: 55px;
+  }
+}
+
+.header__container--accent {
+  border-bottom: 1px solid $border-color-primary;
 }
 
 .header__logo {
@@ -11,10 +42,13 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  padding-top: 13px;
-  padding-bottom: 12px;
-  margin-right: 40px;
-  width: fit-content;
+
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    margin-right: 40px;
+    width: fit-content;
+  }
 
 
   &:hover {

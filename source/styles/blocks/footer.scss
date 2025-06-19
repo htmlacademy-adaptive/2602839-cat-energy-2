@@ -1,38 +1,61 @@
 //  ПОДВАЛ
 
 .footer__wrapper {
-  display: flex;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  flex-direction: column;
+  @include mobile {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+  }
+
+  @include tablet {
+    padding-top: 54px;
+    padding-bottom: 57px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  @include desktop {
+    padding-top: 67px;
+  }
 }
 
 .footer__logo {
-  align-self: center;
-  padding-bottom: 17px;
+  @include mobile {
+    align-self: center;
+    padding-bottom: 17px;
+  }
 }
 
 .footer__social {
-  padding-top: 20px;
-  padding-bottom: 17px;
-  border-top: 1px solid $border-color-second;
-  border-bottom: 1px solid $border-color-second;
+  @include mobile {
+    padding-top: 20px;
+    padding-bottom: 17px;
+    border-top: 1px solid $border-color-second;
+    border-bottom: 1px solid $border-color-second;
+  }
 }
 
 .footer__developer {
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
+
+  @include mobile {
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    gap: 23px;
+    justify-content: end;
+  }
+
 
   &:active {
     opacity: 0.3;
   }
-
-  // &:hover {
-  //   opacity: 0.6;
-  // }
 
   &:hover::after,
   &:active::after {
@@ -51,7 +74,6 @@
     background-color: $font-color-accent;
   }
 }
-
 
 .footer__developer-title {
   @include font-info($second-font, 16px, 20px);

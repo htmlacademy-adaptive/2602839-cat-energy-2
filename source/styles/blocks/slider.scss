@@ -4,11 +4,11 @@
   position: relative;
 }
 
-.slider__button {
+.slider__range {
   position: relative;
 }
 
-.slider__button::before {
+.slider__range::before {
   content: "";
   position: absolute;
   width: 4px;
@@ -21,7 +21,7 @@
   transform: translateX(-50%);
 }
 
-.slider__button::after {
+.slider__range::after {
   content: "";
   position: absolute;
   width: 40px;

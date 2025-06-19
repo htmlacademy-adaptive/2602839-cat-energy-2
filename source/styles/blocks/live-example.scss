@@ -1,31 +1,103 @@
 //  ЖИВОЙ ПРИМЕР
 
 .live-example {
-  background-color: $bg-color-second;
-  padding-top: 25px;
+  @include mobile {
+    background-color: $bg-color-second;
+    padding-top: 25px;
+  }
+
+  @include tablet {
+    background-color: $bg-color-primary;
+    background-image: linear-gradient($bg-color-transparent 0 619px, $bg-color-accent-alternate 619px 100%);
+  }
+
+  @include desktop {
+    background-color: $bg-color-primary;
+    background-image: linear-gradient($bg-color-transparent 0 156px, $bg-color-accent-alternate 156px 100%);
+  }
 }
 
 .live-example__wrapper {
   display: grid;
-  padding-bottom: 40px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
+  @include tablet {
+    grid-template-columns: 2fr 1fr;
+    gap: 20px 30px;
+    padding-top: 43px;
+    padding-bottom: 101px;
+  }
+
+  @include desktop {
+    grid-template-columns: auto 560px;
+    column-gap: 224px;
+    padding-top: 20px;
+    padding-bottom: 75px;
+  }
 }
 
 .live-example__title {
   margin: 0;
-  margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    margin-bottom: 126px;
+  }
 }
 
 .live-example__description {
   @include font-info($second-font, 14px, 18px);
   color: $font-color-accent;
-  margin: 0 0 20px;
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    grid-column: 1/-1;
+    margin-bottom: 35px;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    margin-bottom: 49px;
+    max-width: 432px;
+  }
 }
 
 .live-example__statistics {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin: 0 0 9px;
+  margin: 0;
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 9px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, 162px);
+    gap: 43px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(auto-fill, 162px);
+    gap: 42px;
+    margin-bottom: 13px;
+  }
 }
 
 .live-example__value {
@@ -44,10 +116,25 @@
   text-transform: lowercase;
   text-align: center;
   align-self: center;
-  max-width: 79px;
-  background-color: $bg-color-second;
-  padding-left: 10px;
-  padding-right: 10px;
+
+  @include mobile {
+    max-width: 79px;
+    background-color: $bg-color-second;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $bg-color-primary;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  @include desktop {
+    background-color: $bg-color-accent-alternate;
+  }
 }
 
 .live-example__value-result {
@@ -57,19 +144,65 @@
   text-align: center;
   text-transform: uppercase;
   border-radius: 3px;
-  padding: 14px 20px 17px;
+
+  @include mobile {
+    padding: 14px 20px 17px;
+  }
+
+  @include tablet {
+    padding: 15px 24px 20px;
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 
 .live-example__cost {
   @include font-info($primary-font, 14px, 20px);
   text-transform: uppercase;
-  text-align: center;
-  margin: 0 0 20px;
+  margin: 0;
+
+  @include mobile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 11px;
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  @include desktop {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 66px;
+  }
 }
 
 .live-example__slider {
-  margin: 0 auto;
-  width: 280px;
-  // height: 256px;
+  @include mobile {
+    margin: 0 auto;
+    width: 280px;
+    height: 256px;
+  }
+
+  @include tablet {
+    margin: 0 auto;
+    width: 500px;
+    height: 512px;
+    grid-column: 1/-1;
+    margin-top: 68px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    grid-column: 2/-1;
+    grid-row: 1/5;
+  }
 }

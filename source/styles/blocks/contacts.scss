@@ -1,11 +1,36 @@
 //  КОНТАКТЫ
 
+.contacts {
+  position: relative;
+}
+
 .contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  margin: 0 auto;
+
+  &--alternate {
+    background-color: $bg-color-second;
+  }
+
+  @include mobile {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    padding: 80px 40px 62px;
+  }
+
+  @include desktop {
+    background-color: $bg-color-primary;
+    position: absolute;
+    top: 95px;
+    padding: 59px 80px;
+    width: 565px;
+    column-gap: 92px;
+    z-index: 4;
+  }
 }
 
 .contacts__title {
@@ -13,17 +38,30 @@
   color: $font-color-primary-alternate;
   text-transform: uppercase;
   margin: 0;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+    min-width: 165px;
+  }
 }
 
 .contacts__description {
   @include font-info($second-font, 14px, 20px);
   color: $font-color-accent;
   margin: 0;
-  text-align: left;
-}
 
-.contacts__wrapper--alternate {
-  background-color: $bg-color-second;
+  @include mobile {
+    text-align: left;
+  }
+
+  @include tablet {
+    text-align: right;
+  }
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .contacts__map {
