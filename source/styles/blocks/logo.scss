@@ -1,7 +1,29 @@
 //  ЛОГОТИП
 
-.logo-title {
+.logo {
+  position: relative;
+}
+
+.logo__title {
   color: $font-color-primary-alternate;
+  display: block;
+
+  @include mobile {
+    min-width: 101px;
+    height: auto;
+    margin-left: 56px;
+  }
+
+  @include tablet {
+    margin-left: 13px;
+    min-width: 101px;
+    height: auto;
+  }
+
+  @include desktop {
+    margin-left: 14px;
+    min-width: 118px;
+  }
 
   &:hover {
     opacity: 0.8;

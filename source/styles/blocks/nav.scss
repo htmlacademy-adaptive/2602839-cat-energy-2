@@ -2,6 +2,11 @@
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
+
+  @include tablet {
+    margin-top: 13px;
+  }
 }
 
 .main-nav__toggle {
@@ -18,6 +23,7 @@
   width: 40px;
   height: 40px;
   padding: 8px 7px;
+  z-index: 5;
 
   &:hover {
     opacity: 0.8;
@@ -62,14 +68,65 @@
 }
 
 .main-nav__wrapper {
-  width: 100%;
-  right: 0;
-  position: absolute;
-  z-index: 1;
-  display: none;
+  @include mobile {
+    width: 100%;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  @include tablet {
+    position: relative;
+  }
+}
+
+.main-nav__toggle--closed ~ .main-nav__wrapper {
+  @include mobile {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms linear, visibility 0s linear 500ms;
+  }
+}
+
+
+.main-nav__toggle--opened ~ .main-nav__wrapper {
+  @include mobile {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 300ms linear, visibility 0s linear;
+  }
 }
 
 .main-nav__list {
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    max-width: 500px;
+    flex-direction: row;
+    align-items: baseline;
+    row-gap: 10px;
+    margin-right: -14px;
+  }
+
+  @include desktop {
+    max-width: 900px;
+  }
+}
+
+@include mobile {
+  .main-nav--no-js {
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__wrapper {
+      visibility: visible;
+      position: static;
+    }
+  }
 }

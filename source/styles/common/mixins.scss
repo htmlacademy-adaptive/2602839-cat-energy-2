@@ -62,12 +62,12 @@
 @mixin button-large {
   @include font-info($primary-font, 20px, 26px);
   @include button-base;
-  padding: 10px;
+  padding: 9px;
 
-  @include tablet() {
+  @include tablet {
     font-size: 16px;
     line-height: 20px;
-    padding: 14px;
+    padding: 10px;
   }
 }
 

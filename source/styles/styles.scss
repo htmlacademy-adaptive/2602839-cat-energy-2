@@ -6,7 +6,7 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/page";
+@import "./blocks/page.scss";
 @import "./blocks/button.scss";
 @import "./blocks/header";
 @import "./blocks/logo";
@@ -18,9 +18,13 @@
 @import "./blocks/how-it-work";
 @import "./blocks/live-example";
 @import "./blocks/catalog";
-@import "./blocks/card.scss";
+@import "./blocks/catalog-item.scss";
 @import "./blocks/additional";
 @import "./blocks/subscribe";
 @import "./blocks/contacts";
 @import "./blocks/footer";
-@import "./blocks/social"
+@import "./blocks/social";
+@import "./blocks/slider";
+@import "./blocks/main-container.scss";
+@import "./blocks/section-title.scss";
+@import "./blocks/show-more.scss";

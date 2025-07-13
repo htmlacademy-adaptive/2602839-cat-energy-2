@@ -2,7 +2,45 @@
 
 .header {
   background-color: $bg-color-primary;
-  min-height: 65px;
+
+  @include tablet {
+    background-color: $bg-color-transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding-top: 25px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    min-width: 1220px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.header__container {
+  position: relative;
+
+  @include mobile {
+    z-index: 3;
+    padding: 0 60px 0 20px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin-right: 47px;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .header__logo {
@@ -11,10 +49,13 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  padding-top: 13px;
-  padding-bottom: 12px;
-  margin-right: 40px;
-  width: fit-content;
+
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    margin-right: 40px;
+    width: auto;
+  }
 
 
   &:hover {

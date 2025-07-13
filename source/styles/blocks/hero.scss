@@ -7,51 +7,192 @@
   text-transform: uppercase;
   text-align: center;
   color: $font-color-primary;
-  margin-bottom: 20px;
+  position: relative;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -224px;
+      left: 50%;
+      display: block;
+      min-width: 50%;
+      min-height: 694px;
+      background-color: $bg-color-picture-alternate;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%),
+        image-set(
+          url("../../images/hero-decoration-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/hero-decoration-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/hero-decoration-desktop@1x.jpg") type("image/jpeg") 1x,
+          url("../../images/hero-decoration-desktop@2x.jpg") type("image/jpeg") 2x),
+        linear-gradient(to bottom, #313134 50%, #343438 100%);
+      background-position: right top;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
 }
 
 .hero__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0 15px;
-
-  background-image:
-    linear-gradient($bg-color-picture 61%, $bg-color-primary 39%),
-    image-set("../../images/hero-decoration-mobile@1x.jpg" 1x type("image/jpg"), "../../images/hero-decoration-mobile@2x.jpg" 2x type("image/jpg")),
-    linear-gradient(to right, $bg-color-picture-alternate);
-
-
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: auto, 320px, auto;
   position: relative;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+
+    background-image:
+      linear-gradient($bg-color-picture 62%, $bg-color-primary 39%),
+      image-set(
+        url("../../images/hero-decoration-mobile@1x.webp") 1x type("image/webp"),
+        url("../../images/hero-decoration-mobile@2x.webp") 2x type("image/webp"),
+        url("../../images/hero-decoration-mobile@1x.jpg") 1x type("image/jpeg"),
+        url("../../images/hero-decoration-mobile@2x.jpg") 2x type("image/jpeg")),
+      linear-gradient(to right, $bg-color-picture-alternate);
+    z-index: -1;
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto, 320px, auto;
+  }
 }
+
 
 .hero__title {
   @include font-info($primary-font, 36px, 36px);
-  margin: 27px 0 25px;
-  color: $font-color-second;
-  text-align: center;
-  text-transform: none;
+  margin: 0;
+
+  @include mobile {
+    color: $font-color-second;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 27px;
+    margin-top: 25px;
+  }
+
+  @include tablet {
+    @include font-info($primary-font, 60px, 60px);
+    color: $font-color-primary;
+    line-height: 60px;
+    max-width: 420px;
+    margin-top: 65px;
+    margin-left: 89px;
+    margin-bottom: 40px;
+    text-transform: none;
+    text-align: left;
+  }
+
+  @include desktop {
+    @include font-info($primary-font, 60px, 60px);
+    color: $font-color-primary;
+    line-height: 60px;
+    max-width: 420px;
+    margin-top: 109px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+    text-transform: none;
+    text-align: left;
+  }
 }
 
 .hero__description {
   @include font-info($primary-font, 14px, 14px);
   text-transform: uppercase;
-  color: $font-color-second;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 29px;
+
+  @include mobile {
+    color: $font-color-second;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 29px;
+  }
+
+  @include tablet {
+    @include font-info($primary-font, 20px, 20px);
+    margin-top: 40px;
+    margin-bottom: 49px;
+    margin-left: 90px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  @include desktop {
+    @include font-info($primary-font, 20px, 20px);
+    margin-bottom: 372px;
+    margin-top: 40px;
+    margin-left: 80px;
+    text-transform: uppercase;
+    text-align: left;
+  }
 }
 
 .hero__image {
   display: block;
-  min-width: 280px;
-  height: auto;
-  margin: 0 auto;
+
+  @include mobile {
+    min-width: 280px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    margin-top: -30px;
+  }
+
+  @include desktop {
+    position: absolute;
+    margin: 0;
+    top: -83px;
+    left: 50%;
+    transform: translateX(-30%) translateY(2px);
+  }
 }
 
 .hero__button {
   @include font-info($primary-font, 16px, 20px);
-  order: 3;
+
+  &:hover {
+    background-color: $button-bg-color-first;
+  }
+
+  &:active {
+    background-color: $button-bg-color-second;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+
+  @include mobile {
+    order: 3;
+    margin: 5px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 1;
+    position: absolute;
+    left: 120px;
+    width: 244px;
+    top: 229px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 1;
+    position: absolute;
+    left: 80px;
+    width: 244px;
+    top: 233px;
+  }
 }
