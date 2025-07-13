@@ -1,0 +1,10 @@
+// Заголовок секции
+
+.section-title {
+  @include font-info($primary-font, 36px, 40px);
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

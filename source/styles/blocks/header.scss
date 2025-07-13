@@ -1,5 +1,68 @@
+// ХЕДЕР - HEADER
+
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $bg-color-primary;
+
+  @include tablet {
+    background-color: $bg-color-transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding-top: 25px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    min-width: 1220px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.header__container {
+  position: relative;
+
+  @include mobile {
+    z-index: 3;
+    padding: 0 60px 0 20px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin-right: 47px;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    margin-right: 40px;
+    width: auto;
+  }
+
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

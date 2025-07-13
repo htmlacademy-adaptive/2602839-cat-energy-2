@@ -1,0 +1,89 @@
+//  ПОДВАЛ
+
+.footer__wrapper {
+  @include mobile {
+    display: flex;
+    padding-top: 38px;
+    padding-bottom: 40px;
+    flex-direction: column;
+  }
+
+  @include tablet {
+    padding-top: 56px;
+    padding-bottom: 57px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  @include desktop {
+    padding-top: 67px;
+  }
+}
+
+.footer__logo {
+  @include mobile {
+    align-self: center;
+    padding-bottom: 19px;
+  }
+}
+
+.footer__logo > .logo__title {
+  margin: 0;
+}
+
+.footer__social {
+  @include mobile {
+    padding-top: 22px;
+    padding-bottom: 17px;
+    border-top: 1px solid $border-color-second;
+    border-bottom: 1px solid $border-color-second;
+  }
+}
+
+.footer__developer {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    gap: 23px;
+    justify-content: end;
+  }
+
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+
+  &:hover::after,
+  &:active::after {
+    background-color: $button-bg-color-first;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    color: $font-color-accent;
+    mask-image: url("../../icons/stack.svg#developer-icon");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $font-color-accent;
+  }
+}
+
+.footer__developer-title {
+  @include font-info($second-font, 16px, 20px);
+  color: $font-color-accent;
+}

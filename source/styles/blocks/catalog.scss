@@ -1,0 +1,48 @@
+//
+
+.catalog__wrapper {
+  @include mobile {
+    padding-top: 28px;
+  }
+
+  @include tablet {
+    padding-top: 65px;
+  }
+
+  @include desktop {
+    padding-top: 73px;
+  }
+}
+
+.catalog__title {
+  @include font-info($primary-font, 36px, 36px);
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 41px;
+  }
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 70px;
+  }
+
+  @include desktop {
+    margin-bottom: 68px;
+  }
+}
+
+.catalog__list {
+  @include list-base;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 46px 60px;
+  }
+
+  @include desktop {
+    gap: 43px 80px;
+  }
+}

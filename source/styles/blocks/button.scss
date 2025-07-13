@@ -1,0 +1,67 @@
+// BUTTONS - КНОПКИ
+
+.button {
+  @include button-base;
+  border: none;
+}
+
+.button--primary {
+  @include button-large;
+  display: block;
+  text-align: center;
+  background: $button-bg-color-first;
+  color: $font-color-second;
+
+  &:hover {
+    background: $button-bg-color-second;
+  }
+
+  &:active {
+    color: rgba($font-color-second, 0.3); // ПЕРЕПРОВЕРИТЬ КОЭФ
+  }
+}
+
+.button--secondary {
+  @include button-small;
+  display: block;
+  text-align: center;
+  background: $button-bg-color-first;
+  color: $font-color-second;
+
+  &:hover {
+    background: $button-bg-color-second;
+  }
+
+  &:active {
+    color: rgba($font-color-second, 0.3); // ПЕРЕПРОВЕРИТЬ КОЭФ
+  }
+}
+
+.button--accent {
+  @include button-small;
+  display: block;
+  text-align: center;
+  background: $bg-color-second;
+  color: $font-color-accent;
+  width: 100%;
+
+  &:hover {
+    background: rgba($font-color-accent, 0.3);  // ПЕРЕПРОВЕРИТЬ КОЭФ
+  }
+}
+
+.button--link {
+  @include button-base;
+  @include font-info($primary-font, 16px, 16px);
+  display: inline-block;
+  color: $font-color-primary;
+
+  &:active {
+    color: rgba($font-color-primary, 0.3); // ПЕРЕПРОВЕРИТЬ КОЭФ
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 24px; // ПЕРЕПРОВЕРИТЬ Так как нет в макете !!!
+  }
+}

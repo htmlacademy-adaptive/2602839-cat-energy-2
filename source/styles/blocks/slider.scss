@@ -1,0 +1,94 @@
+//  SLIDER - Слайдер с котиками
+.slider {
+  position: relative;
+  width: 100%;
+
+  @include mobile {
+    height: 256px;
+  }
+
+  @include tablet {
+    height: 512px;
+    right: 15px;
+  }
+}
+
+.slider .slider__image {
+  width: 100%;
+  display: block;
+}
+
+.slider__image--before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include mobile {
+    clip: rect(0, 140px, 256px, 0);
+  }
+
+  @include tablet {
+    clip: rect(0, 280px, 512px, 0);
+  }
+}
+
+.slider__image--after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include mobile {
+    clip: rect(0, 280px, 256px, 140px);
+  }
+
+  @include tablet {
+    clip: rect(0, 560px, 512px, 280px);
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  padding: 0;
+  color: #666666;
+  background-color: #666666;
+  border: none;
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.slider__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+}
+
+.slider__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  mask-image: url("../../icons/stack.svg#thumb-icon");
+  mask-size: 24px 18px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: #666666;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 4;
+}

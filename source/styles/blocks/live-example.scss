@@ -1,0 +1,218 @@
+//  ЖИВОЙ ПРИМЕР
+
+.live-example {
+  @include mobile {
+    background-color: $bg-color-second;
+    padding-top: 25px;
+  }
+
+  @include tablet {
+    background-color: $bg-color-primary;
+    background-image: linear-gradient($bg-color-transparent 0 57%, $bg-color-accent-alternate 57% 100%);
+  }
+
+  @include desktop {
+    background-color: $bg-color-primary;
+    background-image: linear-gradient($bg-color-transparent 0 25%, $bg-color-accent-alternate 25% 100%);
+  }
+}
+
+.live-example__wrapper {
+  display: grid;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
+  @include tablet {
+    grid-template-columns: 60% 40%;
+    gap: 20px 30px;
+    padding-top: 43px;
+    padding-bottom: 101px;
+  }
+
+  @include desktop {
+    grid-template-columns: auto 560px;
+    gap: 0;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+}
+
+.live-example__title {
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    margin-top: 1px;
+    margin-bottom: 81px;
+  }
+}
+
+.live-example__description {
+  @include font-info($second-font, 14px, 18px);
+  color: $font-color-accent;
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    grid-column: 1/-1;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 11px;
+    text-align: start;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    margin-bottom: 0;
+    max-width: 444px;
+  }
+}
+
+.live-example__statistics {
+  display: grid;
+  margin: 0;
+  align-items: start;
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 9px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, 162px);
+    gap: 43px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(auto-fill, 162px);
+    gap: 42px;
+    margin-bottom: -10px;
+    grid-column: 1/2;
+  }
+}
+
+.live-example__value {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.live-example__value-description {
+  @include font-info($second-font, 12px, 12px);
+  position: relative;
+  top: -10px;
+  text-transform: lowercase;
+  text-align: center;
+  align-self: center;
+
+  @include mobile {
+    max-width: 79px;
+    background-color: $bg-color-second;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $bg-color-primary;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  @include desktop {
+    background-color: $bg-color-accent-alternate;
+  }
+}
+
+.live-example__value-result {
+  @include font-info($primary-font, 24px, 24px);
+  margin: 0;
+  border: 1px solid $input-color-border-accent;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  @include mobile {
+    padding: 14px 20px 17px;
+  }
+
+  @include tablet {
+    padding: 15px 24px 20px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+
+.live-example__cost {
+  @include font-info($primary-font, 14px, 20px);
+  text-transform: uppercase;
+  margin: 0;
+
+  @include mobile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 8px;
+    padding-left: 62px;
+    padding-right: 31px;
+    text-align: end;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    display: flex;
+    padding-left: 0;
+    justify-content: flex-start;
+    gap: 66px;
+    margin-top: -13px;
+  }
+}
+
+.live-example__slider {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include mobile {
+    width: 280px;
+  }
+
+  @include tablet {
+    width: 560px;
+    grid-column: 1/-1;
+    padding-top: 69px;
+  }
+
+  @include desktop {
+    width: 560px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    padding-top: 3px;
+    margin-left: 15px;
+  }
+}

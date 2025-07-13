@@ -1,0 +1,110 @@
+// НАВИГАЦИЯ - МЕНЮ
+
+.site-list {
+  @include font-info($primary-font, 20px, 20px);
+  @include list-base;
+  font-family: inherit;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: -13px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 26px; // уточнить!!! На макете не бъётся
+    padding-top: 5px;
+  }
+}
+
+.site-list__item {
+  @include mobile {
+    &:first-child .site-list__link {
+      border-top: 1px solid $border-color-alternate;
+    }
+  }
+}
+
+.site-list__item--active .site-list__link::before {
+  @include tablet {
+    content: "";
+    position: absolute;
+    background-color: $bg-color-accent;
+    height: 2px;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+  }
+}
+
+
+.site-list__link {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  color: $font-color-primary;
+
+
+  &:hover {
+    color: rgba($font-color-primary, 0.6);
+  }
+
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
+
+  &:disabled {
+    color: rgba($font-color-primary, 0.1);
+  }
+
+
+  @include mobile {
+    display: block;
+    background-color: $bg-color-primary;
+    color: $font-color-primary;
+    padding: 22px 20px 23px;
+    border-bottom: 1px solid $border-color-alternate;
+  }
+
+  @include tablet {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+
+  @include desktop {
+    margin-left: 16px;
+  }
+}
+
+.site-list__link--alternate {
+  @include desktop {
+    color: $font-color-second;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-list__link--active-alternate.site-list__link::before {
+  @include desktop {
+    content: "";
+    position: absolute;
+    background-color: $bg-color-primary;
+    height: 2px;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+  }
+}

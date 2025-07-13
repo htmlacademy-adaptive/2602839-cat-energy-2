@@ -1,0 +1,158 @@
+//  КАК ЭТО РАБОТАЕТ
+
+.how-it-work {
+  padding-bottom: 49px;
+  position: relative;
+
+  @include tablet {
+    padding-top: 45px;
+  }
+
+  @include desktop {
+    padding-top: 71px;
+  }
+
+  &::after {
+    @include tablet {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $border-color-alternate;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.how-it-work__title {
+  @include mobile {
+    margin: 20px auto 41px;
+  }
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.how-it-work__list {
+  @include list-base;
+  display: grid;
+  gap: 20px;
+  counter-reset: how-it-work-counter;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
+    margin-top: 35px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    margin-top: 32px;
+  }
+}
+
+.how-it-work__item {
+  @include font-info($second-font, 14px, 18px);
+  color: $font-color-accent;
+  display: grid;
+  position: relative;
+
+  @include mobile {
+    grid-template-columns: 60px auto;
+    gap: 20px;
+  }
+
+  @include tablet {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 40px 0;
+    min-height: 280px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $bg-color-accent;
+    aspect-ratio: 1;
+
+    @include mobile {
+      width: 60px;
+    }
+
+    @include tablet {
+      width: 80px;
+      margin-bottom: 31px;
+    }
+
+    @include desktop {
+      margin-bottom: 33px;
+    }
+  }
+
+  &::after {
+    @include tablet {
+      @include font-info($primary-font, 280px, 280px);
+      counter-increment: how-it-work-counter;
+      content: counter(how-it-work-counter);
+      color: $bg-color-second;
+      position: absolute;
+      min-width: 134px;
+      right: 75px;
+      top: 0;
+      z-index: -1;
+    }
+
+    @include desktop {
+      right: -5px;
+    }
+  }
+}
+
+.how-it-work__item--leaf::before {
+  background-image: url("../../icons/stack.svg#leaf-icon");
+  background-size: 30px 32px;
+}
+
+.how-it-work__item--powder::before {
+  background-image: url("../../icons/stack.svg#powder-icon");
+  background-size: 27px 29px;
+}
+
+.how-it-work__item--tableware::before {
+  background-image: url("../../icons/stack.svg#tableware-icon");
+  background-size: 26px 30px;
+}
+
+.how-it-work__item--time::before {
+  background-image: url("../../icons/stack.svg#time-icon");
+  background-size: 27px 31px;
+}
+
+
+.how-it-work__description {
+  align-self: center;
+  margin: 0;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  @include tablet {
+    padding-right: 80px;
+  }
+
+  @include desktop {
+    padding-right: 0;
+  }
+}
