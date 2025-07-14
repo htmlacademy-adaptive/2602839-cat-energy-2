@@ -33,6 +33,10 @@
     opacity: 0.6;
   }
 
+  &:disabled {
+    opacity: 0.1;
+  }
+
   @include tablet {
     display: none;
   }

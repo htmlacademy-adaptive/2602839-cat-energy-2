@@ -265,7 +265,13 @@
   &:hover::after {
     transform: scaleX(1.5);
     transform-origin: left center;
-    transition: scale 0.2s;
+    transition: scale 2s;
+  }
+
+  &:focus::after {
+    transform: scaleX(1.5);
+    transform-origin: left center;
+    transition: scale 2s;
   }
 
   &:active {

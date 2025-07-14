@@ -23,7 +23,8 @@
   width: fit-content;
 
   @include mobile {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
+    padding-right: 41px;
   }
 
   @include tablet {
@@ -79,7 +80,7 @@
   }
 }
 
-.subscribe-input {
+.subscribe__input {
   @include font-info($primary-font, 20px, 24px);
   text-transform: uppercase;
   color: $font-color-accent;
@@ -98,9 +99,17 @@
   @include desktop {
     min-width: 496px;
   }
+
+  &:hover {
+    outline: 2px solid $border-color-second;
+  }
+
+  &:focus {
+    border: 2px solid $border-color-second;
+  }
 }
 
-.subscribe-button {
+.subscribe__button {
   @include mobile {
     width: 100%;
     height: 56px;

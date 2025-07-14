@@ -163,6 +163,10 @@
     background-color: $button-bg-color-first;
   }
 
+  &focus {
+    background-color: $button-bg-color-first;
+  }
+
   &:active {
     background-color: $button-bg-color-second;
   }
