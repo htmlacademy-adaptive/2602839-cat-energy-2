@@ -16,8 +16,17 @@
     background: $button-bg-color-second;
   }
 
+
+  &:focus {
+    background: $button-bg-color-second;
+  }
+
   &:active {
-    color: rgba($font-color-second, 0.3); // ПЕРЕПРОВЕРИТЬ КОЭФ
+    color: rgba($font-color-second, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 }
 
@@ -32,8 +41,16 @@
     background: $button-bg-color-second;
   }
 
+  &:focus {
+    background: $button-bg-color-second;
+  }
+
   &:active {
-    color: rgba($font-color-second, 0.3); // ПЕРЕПРОВЕРИТЬ КОЭФ
+    color: rgba($font-color-second, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 }
 
@@ -46,7 +63,15 @@
   width: 100%;
 
   &:hover {
-    background: rgba($font-color-accent, 0.3);  // ПЕРЕПРОВЕРИТЬ КОЭФ
+    background: rgba($font-color-accent, 0.3);
+  }
+
+  &:focus {
+    background: rgba($font-color-accent, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 }
 
@@ -57,11 +82,15 @@
   color: $font-color-primary;
 
   &:active {
-    color: rgba($font-color-primary, 0.3); // ПЕРЕПРОВЕРИТЬ КОЭФ
+    color: rgba($font-color-primary, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 
   @include tablet {
     font-size: 20px;
-    line-height: 24px; // ПЕРЕПРОВЕРИТЬ Так как нет в макете !!!
+    line-height: 24px;
   }
 }

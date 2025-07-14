@@ -61,6 +61,58 @@
   border: none;
   border-radius: 2px;
   transform: translateX(-50%);
+
+  &:hover {
+    color: $button-bg-color-first;
+    background-color: $button-bg-color-first;
+  }
+
+  &:focus {
+    color: $button-bg-color-first;
+    background-color: $button-bg-color-first;
+  }
+
+  &:active {
+    color: $button-bg-color-second;
+    background-color: $button-bg-color-second;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+
+  &:hover::before {
+    border-color: $button-bg-color-first;
+  }
+
+  &:focus::before {
+    border-color: $button-bg-color-first;
+  }
+
+  &:active::before {
+    border-color: $button-bg-color-second;
+  }
+
+  &:disabled::before {
+    opacity: 0.1;
+  }
+
+
+  &:hover::after {
+    background-color: $button-bg-color-first;
+  }
+
+  &:focus::after {
+    background-color: $button-bg-color-first;
+  }
+
+  &:active::after {
+    background-color: $button-bg-color-second;
+  }
+
+  &:disabled::after {
+    opacity: 0.1;
+  }
 }
 
 .slider__button::before {

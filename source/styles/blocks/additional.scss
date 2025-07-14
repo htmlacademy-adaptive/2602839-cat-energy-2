@@ -9,7 +9,7 @@
 
   @include mobile {
     margin-top: 17px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
 
   @include tablet {
@@ -36,7 +36,8 @@
   width: fit-content;
 
   @include mobile {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
+    padding-right: 41px;
   }
 
   @include tablet {
@@ -259,7 +260,7 @@
     @include mobile {
       width: 76px;
       height: 81px;
-      margin: 55px auto 0;
+      margin: 58px auto 0;
       align-self: flex-start;
     }
 

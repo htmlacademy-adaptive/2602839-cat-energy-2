@@ -54,6 +54,10 @@
     color: rgba($font-color-primary, 0.6);
   }
 
+  &:focus {
+    color: rgba($font-color-primary, 0.6);
+  }
+
   &:active {
     color: rgba($font-color-primary, 0.3);
   }
@@ -88,6 +92,10 @@
     color: $font-color-second;
 
     &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
       opacity: 0.6;
     }
 
